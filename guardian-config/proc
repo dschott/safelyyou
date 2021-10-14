@@ -1,0 +1,43 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+safelyy+ 11905  3.9  1.2 3716268 402160 ?      Sl   09:37   3:14 /opt/safely-you/guardian/venv/bin/python manage.py services stream 60:23:A4:BD:B9:E1 run
+safelyy+ 14736  4.9  1.5 4043996 516560 ?      Sl   Oct01 190:03 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:0F:A9 run
+safelyy+ 14737  4.7  1.3 3775556 436372 ?      Sl   Oct01 180:52 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:10:51 run
+safelyy+ 14738  4.7  1.3 3935224 444708 ?      Sl   Oct01 181:55 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:14:F3 run
+safelyy+ 14739  5.0  1.5 4037012 516100 ?      Sl   Oct01 192:21 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:15:53 run
+safelyy+ 14740  4.8  1.6 3998700 536092 ?      Sl   Oct01 186:06 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:16:86 run
+safelyy+ 14741  4.8  1.6 4014080 543788 ?      Sl   Oct01 186:31 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:16:9D run
+safelyy+ 14742  4.8  1.5 3952368 513744 ?      Sl   Oct01 187:44 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:D4 run
+safelyy+ 14743  4.8  1.6 4037260 527052 ?      Sl   Oct01 184:42 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:D6 run
+safelyy+ 14744  5.2  1.6 4014256 550600 ?      Sl   Oct01 203:31 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:1F run
+safelyy+ 14745  4.9  1.3 3768668 432608 ?      Sl   Oct01 189:01 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:23 run
+safelyy+ 14746  5.0  1.5 3889560 522252 ?      Sl   Oct01 194:35 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:DA run
+safelyy+ 14747  4.7  1.2 3738104 406744 ?      Sl   Oct01 181:03 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:1A:1E run
+safelyy+ 15074  0.0  0.8 3296460 269144 ?      Sl   Oct01   0:04 /opt/safely-you/guardian/venv/bin/uwsgi --socket /var/safely-you/run/guardian/nginx.sock --module server.wsgi --chmod-soc
+safelyy+ 16814  109  5.8 21173384 1924740 ?    Rl   Oct01 4214:33 /opt/safely-you/guardian/venv/bin/python manage.py services ai run --ai-type=OTG
+safelyy+ 16815  4.7  1.5 3978224 510888 ?      Rl   Oct01 180:39 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:0F:B5 run
+safelyy+ 16816  4.8  1.2 3742848 403152 ?      Sl   Oct01 184:27 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:0F:F1 run
+safelyy+ 16817  5.0  1.3 3763788 451384 ?      Sl   Oct01 195:10 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:15:2D run
+safelyy+ 16818  4.8  1.5 3799984 492324 ?      Sl   Oct01 185:42 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:15:4B run
+safelyy+ 16819  5.0  1.5 3825592 503184 ?      Sl   Oct01 192:31 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:EC run
+safelyy+ 16820  4.7  1.4 3804184 470576 ?      Sl   Oct01 183:12 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:FF run
+safelyy+ 16821  4.7  1.6 4013688 525620 ?      Sl   Oct01 183:51 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:10 run
+safelyy+ 16822  4.6  1.2 3736956 399716 ?      Sl   Oct01 180:23 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:14 run
+safelyy+ 16823  4.9  1.5 3969244 521976 ?      Sl   Oct01 188:50 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:2F run
+safelyy+ 16824  5.1  1.5 4032680 515784 ?      Sl   Oct01 198:29 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:35 run
+safelyy+ 16825  4.7  1.4 3993024 476000 ?      Sl   Oct01 183:13 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:F9 run
+safelyy+ 17437  329  1.1 3592664 389404 ?      Sl   Oct01 12659:55 /opt/safely-you/guardian/venv/bin/python manage.py services motion run
+root     17680  0.0  0.0  56896  4576 ?        Ss   Oct01   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+www-data 17683  0.0  0.0  61644  6772 ?        S    Oct01   0:00 nginx: worker process
+safelyy+ 20079  4.1  1.2 3687048 406268 ?      Sl   10:28   1:19 /opt/safely-you/guardian/venv/bin/python manage.py services stream 50:13:95:A2:78:72 run
+root     22532  0.1  0.0  71340 23108 ?        Ss   May28 215:18 /usr/bin/python /usr/local/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+root     22647  0.0  0.0  58808  3164 ?        S    11:00   0:00 /usr/sbin/CRON -f
+root     22648  0.0  0.0  58808  3172 ?        S    11:00   0:00 /usr/sbin/CRON -f
+root     22656  0.0  0.0  58808  3104 ?        S    11:00   0:00 /usr/sbin/CRON -f
+safelyy+ 22672  0.0  0.0   4636   836 ?        Ss   11:00   0:00 /bin/sh -c sleep 30; /opt/safely-you/guardian/venv/bin/python /opt/safely-you/guardian/manage.py task upload_videos
+safelyy+ 22674  0.0  0.0   4636   832 ?        Ss   11:00   0:00 /bin/sh -c /opt/safely-you/guardian/venv/bin/python /opt/safely-you/guardian/manage.py snapshot
+root     22686  0.0  0.0   4636   812 ?        Ss   11:00   0:00 /bin/sh -c sleep $((RANDOM % 30)); onzra-monitor --nsca-host monitoring.safely-you.com --probe-name "Check VPN Connection
+safelyy+ 22694  0.0  0.0   7476   852 ?        S    11:00   0:00 sleep 30
+safelyy+ 22706 13.0  0.8 3264284 271560 ?      Sl   11:00   0:01 /opt/safely-you/guardian/venv/bin/python /opt/safely-you/guardian/manage.py snapshot
+root     22722  0.2  0.0  31392 11332 ?        S    11:00   0:00 /usr/bin/python3 /usr/bin/onzra-monitor --nsca-host monitoring.safely-you.com --probe-name Check VPN Connection --hostnam
+root     22756  0.0  0.0  18096  2580 ?        S    11:00   0:00 /usr/lib/nagios/plugins/check_ping -H ci.internal.safely-you.com -w 3000.0,80% -c 5000.0,100% -p 5
+root     22762  0.0  0.0  19716  2240 ?        S    11:00   0:00 /bin/ping -n -U -w 30 -c 5 ci.internal.safely-you.com

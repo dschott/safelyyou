@@ -1,0 +1,23 @@
+{
+    "SERVER_HOSTNAME": "eskaton.discover.safely-you.com",
+    "RESIDENCE_PASSWORD": "a8P45FHTcsaFLyxv",
+    "RESIDENCE_NAME": "Eskaton Trousdale",
+    "SENSOR_PASSWORD": "REDACTED",
+    "SENSOR_CONFIGS": [
+        "GeoVision",
+        "Amcrest"
+    ],
+    "FTP_PASSWORD": "2BwDdlT4c7pmrjzr",
+    "AI_ENABLED": true,
+    "AI_DETECTION_MODELS": {
+        "OTG": {
+            "gpu_id": 0,
+            "params_hash": "5fd04997aa4e32120d48015c",
+            "model_hash": "5f89df96aa4e322ed547382d"
+        }
+    },
+    "SECRET_KEY": "REDACTED",
+    "LOG_LEVEL": "INFO",
+    "VIDEOS_BUFFER_DURATION": 30,
+    "NETWORK_INTERFACE": "eno2"
+}

@@ -1,0 +1,65 @@
+    location = /auth-proxy {
+        proxy_pass http://unix:/opt/safely-you/ldap-auth/authp.sock;
+        proxy_pass_request_body off;
+        proxy_set_header  Content-Length "";
+        proxy_pass_header Set-Cookie;
+    }
+
+{% for ip in range(1, 255) -%}
+    {% if ip_prefix + '.' + ip|string not in exclude_ips -%}
+    location /{{ ip_prefix }}.{{ ip }}/ {
+        proxy_pass       https://{{ ip_prefix }}.{{ ip }}/;
+
+        proxy_read_timeout 300;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header X-Forwarded-Port 443;
+        proxy_buffer_size 512k;
+        proxy_buffers 512 512k;
+        client_body_buffer_size 512k;
+        proxy_ssl_verify off;
+
+{% if nginx_ldap_enable %}
+        auth_request /auth-proxy;
+        auth_request_set $saved_set_cookie $upstream_http_set_cookie;
+        auth_request_set $x_remote_user $upstream_http_x_auth_user;
+        auth_request_set $auth_user $upstream_http_x_auth_user;
+        add_header Set-Cookie $saved_set_cookie;
+{% endif -%}
+
+        sub_filter_types *;
+        sub_filter_once off;
+
+        # GeoVision rules
+        sub_filter 'src=" ../index.htm?clientIpAddr' 'src="/{{ ip_prefix }}.{{ ip }}/index.htm?clientIpAddr';
+        sub_filter '"/LANG/' '"/{{ ip_prefix }}.{{ ip }}/LANG/';
+        sub_filter '"/LAPI/V1.0/' '"/{{ ip_prefix }}.{{ ip }}/LAPI/V1.0/';
+        sub_filter '"/page/common/' '"/{{ ip_prefix }}.{{ ip }}/page/common/';
+        sub_filter '"/skin/' '"/{{ ip_prefix }}.{{ ip }}/skin/';
+        sub_filter ',/skin/' ',/{{ ip_prefix }}.{{ ip }}/skin/';
+        sub_filter '"/device_cap.xml' '"/{{ ip_prefix }}.{{ ip }}/device_cap.xml';
+
+        # HikVision rules
+        sub_filter '%s/ISAPI/' '%s/{{ ip_prefix }}.{{ ip }}/ISAPI/';
+        sub_filter '%s/SDK/' '%s/{{ ip_prefix }}.{{ ip }}/SDK/';
+        sub_filter '"/ISAPI/' '"/{{ ip_prefix }}.{{ ip }}/ISAPI/';
+
+        # EdgeRouter rules
+        sub_filter 'url("/media/' 'url("/{{ ip_prefix }}.{{ ip }}/media/';
+        sub_filter 'src="/media/' 'src="/{{ ip_prefix }}.{{ ip }}/media/';
+        sub_filter 'href="/lib/' 'href="/{{ ip_prefix }}.{{ ip }}/lib/';
+        sub_filter 'src="/lib/' 'src="/{{ ip_prefix }}.{{ ip }}/lib/';
+        sub_filter 'https://{{ ip_prefix }}.{{ ip }}/' '/{{ ip_prefix }}.{{ ip }}/';
+        sub_filter 'wss://{{ ip_prefix }}.{{ ip }}/' 'wss://$host/{{ ip_prefix }}.{{ ip }}/';
+        sub_filter '"/api/wizard/' '"/{{ ip_prefix }}.{{ ip }}/api/wizard/';
+        sub_filter '"/logout";' '"/{{ ip_prefix }}.{{ ip }}/logout";';
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host {{ ip_prefix }}.{{ ip }};
+        proxy_set_header Origin https://{{ ip_prefix }}.{{ ip }};
+    }
+    {% endif -%}
+{% endfor %}

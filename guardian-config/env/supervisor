@@ -1,0 +1,7 @@
+/usr/bin/python /usr/local/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+
+
+/proc/22532/environ: LANG=en_US.UTF-8
+/proc/22532/environ: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+/proc/22532/environ: INVOCATION_ID=f16487bd548d43e787071f8a120b7466
+/proc/22532/environ: JOURNAL_STREAM=9:63796946

@@ -1,0 +1,362 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0  78276  7208 ?        Ss   May21   0:50 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    May21   0:01 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I    May21   5:23 [kworker/0:0]
+root         4  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   May21   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    May21   4:56 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    May21  99:48 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    May21   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    May21   0:52 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    May21   0:14 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    May21   0:12 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    May21   0:52 [migration/1]
+root        16  0.0  0.0      0     0 ?        S    May21   4:29 [ksoftirqd/1]
+root        18  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/2]
+root        20  0.0  0.0      0     0 ?        S    May21   0:11 [watchdog/2]
+root        21  0.0  0.0      0     0 ?        S    May21   0:51 [migration/2]
+root        22  0.0  0.0      0     0 ?        S    May21   4:29 [ksoftirqd/2]
+root        24  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/2:0H]
+root        25  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/3]
+root        26  0.0  0.0      0     0 ?        S    May21   0:12 [watchdog/3]
+root        27  0.0  0.0      0     0 ?        S    May21   0:52 [migration/3]
+root        28  0.0  0.0      0     0 ?        S    May21   4:25 [ksoftirqd/3]
+root        30  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/3:0H]
+root        31  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/4]
+root        32  0.0  0.0      0     0 ?        S    May21   0:13 [watchdog/4]
+root        33  0.0  0.0      0     0 ?        S    May21   0:56 [migration/4]
+root        34  0.0  0.0      0     0 ?        S    May21   4:08 [ksoftirqd/4]
+root        36  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/4:0H]
+root        37  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/5]
+root        38  0.0  0.0      0     0 ?        S    May21   0:12 [watchdog/5]
+root        39  0.0  0.0      0     0 ?        S    May21   0:57 [migration/5]
+root        40  0.0  0.0      0     0 ?        S    May21   4:02 [ksoftirqd/5]
+root        42  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/5:0H]
+root        43  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/6]
+root        44  0.0  0.0      0     0 ?        S    May21   0:13 [watchdog/6]
+root        45  0.0  0.0      0     0 ?        S    May21   0:53 [migration/6]
+root        46  0.0  0.0      0     0 ?        S    May21   4:17 [ksoftirqd/6]
+root        48  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/6:0H]
+root        49  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/7]
+root        50  0.0  0.0      0     0 ?        S    May21   0:12 [watchdog/7]
+root        51  0.0  0.0      0     0 ?        S    May21   0:59 [migration/7]
+root        52  0.0  0.0      0     0 ?        S    May21   4:03 [ksoftirqd/7]
+root        54  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/7:0H]
+root        55  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/8]
+root        56  0.0  0.0      0     0 ?        S    May21   0:12 [watchdog/8]
+root        57  0.0  0.0      0     0 ?        S    May21   0:53 [migration/8]
+root        58  0.0  0.0      0     0 ?        S    May21   4:01 [ksoftirqd/8]
+root        60  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/8:0H]
+root        61  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/9]
+root        62  0.0  0.0      0     0 ?        S    May21   0:11 [watchdog/9]
+root        63  0.0  0.0      0     0 ?        S    May21   0:52 [migration/9]
+root        64  0.0  0.0      0     0 ?        S    May21   4:02 [ksoftirqd/9]
+root        66  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/9:0H]
+root        67  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/10]
+root        68  0.0  0.0      0     0 ?        S    May21   0:11 [watchdog/10]
+root        69  0.0  0.0      0     0 ?        S    May21   0:51 [migration/10]
+root        70  0.0  0.0      0     0 ?        S    May21   4:02 [ksoftirqd/10]
+root        72  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/10:0H]
+root        73  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/11]
+root        74  0.0  0.0      0     0 ?        S    May21   0:16 [watchdog/11]
+root        75  0.0  0.0      0     0 ?        S    May21   0:53 [migration/11]
+root        76  0.0  0.0      0     0 ?        S    May21   3:53 [ksoftirqd/11]
+root        78  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/11:0H]
+root        79  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/12]
+root        80  0.0  0.0      0     0 ?        S    May21   0:13 [watchdog/12]
+root        81  0.0  0.0      0     0 ?        S    May21   0:58 [migration/12]
+root        82  0.0  0.0      0     0 ?        S    May21   3:30 [ksoftirqd/12]
+root        84  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/12:0H]
+root        85  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/13]
+root        86  0.0  0.0      0     0 ?        S    May21   0:14 [watchdog/13]
+root        87  0.0  0.0      0     0 ?        S    May21   0:56 [migration/13]
+root        88  0.0  0.0      0     0 ?        S    May21   3:47 [ksoftirqd/13]
+root        90  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/13:0H]
+root        91  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/14]
+root        92  0.0  0.0      0     0 ?        S    May21   0:14 [watchdog/14]
+root        93  0.0  0.0      0     0 ?        S    May21   0:55 [migration/14]
+root        94  0.0  0.0      0     0 ?        S    May21   4:07 [ksoftirqd/14]
+root        96  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/14:0H]
+root        97  0.0  0.0      0     0 ?        S    May21   0:00 [cpuhp/15]
+root        98  0.0  0.0      0     0 ?        S    May21   0:13 [watchdog/15]
+root        99  0.0  0.0      0     0 ?        S    May21   0:58 [migration/15]
+root       100  0.0  0.0      0     0 ?        S    May21   3:41 [ksoftirqd/15]
+root       102  0.0  0.0      0     0 ?        I<   May21   0:00 [kworker/15:0H]
+root       103  0.0  0.0      0     0 ?        S    May21   0:00 [kdevtmpfs]
+root       104  0.0  0.0      0     0 ?        I<   May21   0:00 [netns]
+root       105  0.0  0.0      0     0 ?        S    May21   0:00 [rcu_tasks_kthre]
+root       106  0.0  0.0      0     0 ?        S    May21   0:00 [kauditd]
+root       109  0.0  0.0      0     0 ?        S    May21   0:13 [khungtaskd]
+root       110  0.0  0.0      0     0 ?        S    May21   0:00 [oom_reaper]
+root       111  0.0  0.0      0     0 ?        I<   May21   0:00 [writeback]
+root       112  0.0  0.0      0     0 ?        S    May21   0:00 [kcompactd0]
+root       113  0.0  0.0      0     0 ?        SN   May21   0:00 [ksmd]
+root       114  0.0  0.0      0     0 ?        SN   May21   1:31 [khugepaged]
+root       115  0.0  0.0      0     0 ?        I<   May21   0:00 [crypto]
+root       116  0.0  0.0      0     0 ?        I<   May21   0:00 [kintegrityd]
+root       117  0.0  0.0      0     0 ?        I<   May21   0:00 [kblockd]
+root       121  0.0  0.0      0     0 ?        I    May21   3:20 [kworker/5:1]
+root       131  0.0  0.0      0     0 ?        I    May21   3:06 [kworker/15:1]
+root       132  0.0  0.0      0     0 ?        I<   May21   0:00 [ata_sff]
+root       133  0.0  0.0      0     0 ?        I<   May21   0:00 [md]
+root       134  0.0  0.0      0     0 ?        I<   May21   0:00 [edac-poller]
+root       135  0.0  0.0      0     0 ?        I<   May21   0:00 [devfreq_wq]
+root       136  0.0  0.0      0     0 ?        I<   May21   0:00 [watchdogd]
+root       139  0.0  0.0      0     0 ?        S    May21   4:04 [kswapd0]
+root       141  0.0  0.0      0     0 ?        S    May21   0:00 [ecryptfs-kthrea]
+root       183  0.0  0.0      0     0 ?        I<   May21   0:00 [kthrotld]
+root       184  0.0  0.0      0     0 ?        I<   May21   0:00 [acpi_thermal_pm]
+root       188  0.0  0.0      0     0 ?        I<   May21   0:00 [ipv6_addrconf]
+root       198  0.0  0.0      0     0 ?        I<   May21   0:00 [kstrp]
+root       215  0.0  0.0      0     0 ?        I<   May21   0:00 [charger_manager]
+root       257  0.0  0.0      0     0 ?        I<   May21   0:00 [nvme-wq]
+root       263  0.0  0.0      0     0 ?        I<   May21   0:00 [ttm_swap]
+root       284  0.0  0.0      0     0 ?        S    May21   0:00 [nv_queue]
+root       285  0.0  0.0      0     0 ?        S    May21   0:00 [nv_queue]
+root       318  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_0]
+root       319  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_0]
+root       320  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_1]
+root       321  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_1]
+root       322  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_2]
+root       323  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_2]
+root       324  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_3]
+root       325  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_3]
+root       326  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_4]
+root       327  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_4]
+root       328  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_5]
+root       329  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_5]
+root       330  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_6]
+root       331  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_6]
+root       332  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_7]
+root       333  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_7]
+root       350  0.0  0.0      0     0 ?        S    May21   0:00 [nvidia-modeset/]
+root       351  0.0  0.0      0     0 ?        S    May21   0:00 [nvidia-modeset/]
+root       352  0.0  0.0      0     0 ?        I<   May21   0:00 [e1000e]
+root       353  0.0  0.0      0     0 ?        S    May21   0:00 [scsi_eh_8]
+root       354  0.0  0.0      0     0 ?        I<   May21   0:00 [scsi_tmf_8]
+root       355  0.0  0.0      0     0 ?        S    May21   2:58 [usb-storage]
+root       356  0.0  0.0      0     0 ?        I<   May21   0:00 [uas]
+root       423  0.0  0.0      0     0 ?        I    May28   2:58 [kworker/12:5]
+root       426  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/10:1H]
+root       427  0.0  0.0      0     0 ?        I<   May21   0:00 [raid5wq]
+root       462  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/0:1H]
+root       463  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/6:1H]
+root       464  0.0  0.0      0     0 ?        I<   May21   0:12 [kworker/7:1H]
+root       474  0.0  0.0      0     0 ?        I<   May21   0:00 [kdmflush]
+root       476  0.0  0.0      0     0 ?        I<   May21   0:00 [bioset]
+root       477  0.0  0.0      0     0 ?        I<   May21   0:00 [kcryptd_io]
+root       479  0.0  0.0      0     0 ?        I<   May21   0:00 [kcryptd]
+root       480  0.0  0.0      0     0 ?        S    May21  49:36 [dmcrypt_write]
+root       481  0.0  0.0      0     0 ?        I<   May21   0:00 [bioset]
+root       488  0.0  0.0      0     0 ?        I<   May21   0:00 [kdmflush]
+root       490  0.0  0.0      0     0 ?        I<   May21   0:00 [bioset]
+root       493  0.0  0.0      0     0 ?        I<   May21   0:00 [kdmflush]
+root       494  0.0  0.0      0     0 ?        I<   May21   0:00 [bioset]
+root       542  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/8:1H]
+root       546  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/4:1H]
+root       550  0.0  0.0      0     0 ?        S    May21  36:47 [jbd2/dm-1-8]
+root       551  0.0  0.0      0     0 ?        I<   May21   0:00 [ext4-rsv-conver]
+root       606  0.0  0.0      0     0 ?        I<   May21   0:00 [iscsi_eh]
+root       607  0.0  0.0      0     0 ?        I<   May21   0:00 [ib-comp-wq]
+root       608  0.0  0.0      0     0 ?        I<   May21   0:00 [ib-comp-unb-wq]
+root       609  0.0  0.0      0     0 ?        I<   May21   0:00 [ib_mcast]
+root       610  0.0  0.0      0     0 ?        I<   May21   0:00 [ib_nl_sa_wq]
+root       611  0.0  0.0      0     0 ?        I<   May21   0:00 [rdma_cm]
+root       625  0.0  0.2 214300 69124 ?        S<s  May21  53:44 /lib/systemd/systemd-journald
+root       627  0.0  0.0 105912  1484 ?        Ss   May21   0:00 /sbin/lvmetad -f
+root       635  0.0  0.0      0     0 ?        I<   May21   0:13 [kworker/11:1H]
+root       637  0.0  0.0  47424  3300 ?        Ss   May21   0:10 /lib/systemd/systemd-udevd
+root       638  0.0  0.0      0     0 ?        I<   May21   0:10 [kworker/12:1H]
+root       639  0.0  0.0      0     0 ?        I<   May21   0:13 [kworker/13:1H]
+root       640  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/9:1H]
+root       644  0.0  0.0      0     0 ?        I<   May21   0:12 [kworker/5:1H]
+root       677  0.0  0.0      0     0 ?        I<   May21   0:13 [kworker/15:1H]
+root       684  0.0  0.0      0     0 ?        I<   May21   0:16 [kworker/14:1H]
+root       690  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/3:1H]
+root       692  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/1:1H]
+root       693  0.0  0.0      0     0 ?        S    May21   0:00 [UVM global queu]
+root       694  0.0  0.0      0     0 ?        S    May21   0:00 [UVM deferred re]
+root       695  0.0  0.0      0     0 ?        S    May21   0:00 [UVM Tools Event]
+root       697  0.2  0.0      0     0 ?        S    May21 483:58 [irq/153-nvidia]
+root       698  0.0  0.0      0     0 ?        S    May21   0:00 [nvidia]
+root       699  5.2  0.0      0     0 ?        S    May21 10341:49 [nv_queue]
+root       723  0.0  0.0      0     0 ?        S    May21   0:00 [irq/154-mei_me]
+root       778  0.0  0.0      0     0 ?        I<   May21   0:14 [kworker/2:1H]
+root       804  0.0  0.0      0     0 ?        SN   May21   0:00 [kipmi0]
+root       873  0.0  0.0      0     0 ?        S    May21   0:00 [jbd2/nvme0n1p1-]
+root       874  0.0  0.0      0     0 ?        I<   May21   0:00 [ext4-rsv-conver]
+systemd+   917  0.0  0.0  80212  4760 ?        Ss   May21   0:40 /lib/systemd/systemd-networkd
+root       926  0.0  0.0      0     0 ?        S    May21  17:34 [irq/156-nvidia]
+root       927  0.0  0.0      0     0 ?        S    May21   0:00 [nvidia]
+root       928  0.0  0.0      0     0 ?        S    May21   7:36 [nv_queue]
+systemd+   956  0.0  0.0  72336  5244 ?        Ss   May21  13:34 /lib/systemd/systemd-resolved
+syslog     961  0.0  0.0 263040  4524 ?        Ssl  May21  14:03 /usr/sbin/rsyslogd -n
+root       962  0.0  0.0 170388  9500 ?        Ssl  May21   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher
+root       967  0.0  0.0 110536  3476 ?        Ssl  May21   7:54 /usr/sbin/irqbalance --foreground
+root       968  0.0  0.0 179896  8392 ?        Ssl  May21   6:14 /usr/sbin/thermald --no-daemon --dbus-enable
+daemon     970  0.0  0.0  28340  2352 ?        Ss   May21   0:00 /usr/sbin/atd -f
+avahi      971  0.0  0.0  47272  3048 ?        Ss   May21   0:00 avahi-daemon: running [guardian-2.local]
+root       972  0.0  0.0 834448  3904 ?        Ssl  May21   1:35 /usr/bin/lxcfs /var/lib/lxcfs/
+avahi      973  0.0  0.0  47084   308 ?        S    May21   0:00 avahi-daemon: chroot helper
+root       974  0.0  0.0 434340  5908 ?        Ssl  May21   0:00 /usr/sbin/ModemManager --filter-policy=strict
+root       975  0.0  0.0  31436  2848 ?        Ss   May21   7:44 /usr/sbin/cron -f
+root       979  0.0  0.0  70704  4684 ?        Ss   May21   0:06 /lib/systemd/systemd-logind
+root       984  0.0  0.0 287680  5784 ?        Ssl  May21   5:54 /usr/lib/accountsservice/accounts-daemon
+root       989  0.0  0.0   8880  1760 ?        Ss   May21   0:00 /usr/bin/nvidia-persistenced --verbose
+message+   993  0.0  0.0  50272  3804 ?        Ss   May21   0:02 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       999  0.0  0.0  45240  4976 ?        Ss   May21   0:16 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root      1013  0.0  0.0 288888  5020 ?        Ssl  May21   0:00 /usr/lib/policykit-1/polkitd --no-debug
+telegraf  1079  0.3  0.0 7227320 31652 ?       Ssl  May21 777:10 /usr/bin/telegraf -config /etc/telegraf/telegraf.conf -config-directory /etc/telegraf/telegraf.d
+_chrony   1091  0.0  0.0 110524  2864 ?        S    May21   0:08 /usr/sbin/chronyd
+redis     1150 12.3  0.1 272636 44560 ?        Rsl  May21 24186:56 /usr/bin/redis-server 127.0.0.1:6379
+root      1861  0.0  0.0      0     0 ?        I    06:25   0:00 [kworker/3:1]
+mysql     1946  0.7  0.7 5365056 250840 ?      Sl   May28 1446:14 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+root      1969  0.0  0.0      0     0 ?        I<   09:21   0:00 [kworker/u33:1]
+root      2058  0.0  0.0      0     0 ?        I    Jul06   1:45 [kworker/1:0]
+uuidd     3019  0.0  0.0  28148  1096 ?        Ss   May21   0:43 /usr/sbin/uuidd --socket-activation
+root      3690  0.1  0.0 3782940 25748 ?       Ssl  May21 380:01 /usr/share/filebeat/bin/filebeat -c /etc/filebeat/filebeat.yml -path.home /usr/share/filebeat -path.config /etc/filebeat
+root      3716  0.0  0.0  25384   292 ?        Ss   May21   1:36 /sbin/iscsid
+root      3718  0.0  0.0  25888  5276 ?        S<Ls May21   0:00 /sbin/iscsid
+root      3743  0.0  0.0  72308  4536 ?        Ss   May21   0:00 /usr/sbin/sshd -D
+root      3775  0.0  0.0  16188  1780 tty1     Ss+  May21   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root      3778  0.0  0.0 2280232 3856 ?        Sl   May21 105:05 /opt/teamviewer/tv_bin/teamviewerd -d
+root      4081  0.0  0.0  67384  3876 ?        Ss   May21   4:17 /usr/lib/postfix/sbin/master -w
+postfix   4085  0.0  0.0  73944  5248 ?        S    May21   5:33 qmgr -l -t unix -u
+root      6394  0.0  0.0      0     0 ?        I<   04:36   0:02 [kworker/u33:6]
+postfix   9735  0.0  0.0  73924  5348 ?        S    10:52   0:00 cleanup -z -t unix -u -c
+root     11544  0.0  0.0      0     0 ?        I    06:30   0:00 [kworker/1:2]
+root     11665  0.0  0.0      0     0 ?        I<   10:12   0:00 [kworker/u33:5]
+safelyy+ 11905  3.9  1.2 3716268 402160 ?      Sl   09:37   3:14 /opt/safely-you/guardian/venv/bin/python manage.py services stream 60:23:A4:BD:B9:E1 run
+root     11995  0.0  0.0      0     0 ?        I    Oct02   0:00 [kworker/9:0]
+postfix  12641  0.0  0.0  69484  6560 ?        S    10:39   0:00 local -t unix
+root     13502  0.0  0.0      0     0 ?        I<   May28   0:00 [xfsalloc]
+root     13503  0.0  0.0      0     0 ?        I<   May28   0:00 [xfs_mru_cache]
+root     13513  0.0  0.0      0     0 ?        S    May28   0:00 [jfsIO]
+root     13514  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13515  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13516  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13517  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13518  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13519  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13520  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13521  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13522  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13523  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13524  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13525  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13526  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13527  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13528  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13529  0.0  0.0      0     0 ?        S    May28   0:00 [jfsCommit]
+root     13530  0.0  0.0      0     0 ?        S    May28   0:00 [jfsSync]
+root     13539  0.0  0.0      0     0 ?        I    Oct02   0:00 [kworker/6:2]
+root     14028  0.0  0.0      0     0 ?        I<   08:35   0:01 [kworker/u33:7]
+root     14484  0.0  0.0      0     0 ?        I<   09:12   0:00 [kworker/u33:0]
+root     14499  0.0  0.0      0     0 ?        I    10:55   0:00 [kworker/u32:1]
+root     14711  0.0  0.0      0     0 ?        I    Jun20   2:13 [kworker/3:0]
+safelyy+ 14736  4.9  1.5 4043996 516560 ?      Sl   Oct01 190:03 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:0F:A9 run
+safelyy+ 14737  4.7  1.3 3775556 436372 ?      Sl   Oct01 180:52 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:10:51 run
+safelyy+ 14738  4.7  1.3 3935224 444708 ?      Sl   Oct01 181:55 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:14:F3 run
+safelyy+ 14739  5.0  1.5 4037012 516100 ?      Sl   Oct01 192:21 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:15:53 run
+safelyy+ 14740  4.8  1.6 3998700 536092 ?      Sl   Oct01 186:06 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:16:86 run
+safelyy+ 14741  4.8  1.6 4014080 543788 ?      Sl   Oct01 186:31 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:16:9D run
+safelyy+ 14742  4.8  1.5 3952368 513744 ?      Sl   Oct01 187:44 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:D4 run
+safelyy+ 14743  4.8  1.6 4037260 527052 ?      Sl   Oct01 184:42 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:D6 run
+safelyy+ 14744  5.2  1.6 4014256 550600 ?      Sl   Oct01 203:31 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:1F run
+safelyy+ 14745  4.9  1.3 3768668 432608 ?      Sl   Oct01 189:01 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:23 run
+safelyy+ 14746  5.0  1.5 3889560 522252 ?      Sl   Oct01 194:35 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:DA run
+safelyy+ 14747  4.7  1.2 3738104 406744 ?      Sl   Oct01 181:03 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:1A:1E run
+postfix  14854  0.0  0.0  69484  6504 ?        S    10:40   0:00 local -t unix
+root     14898  0.0  0.0      0     0 ?        I<   10:40   0:00 [kworker/u33:9]
+root     14899  0.0  0.0      0     0 ?        I<   10:40   0:00 [kworker/u33:10]
+root     14967  0.0  0.0      0     0 ?        I    Oct01   0:00 [kworker/0:1]
+root     15050  0.0  0.0      0     0 ?        I    Oct01   0:00 [kworker/12:0]
+safelyy+ 15074  0.0  0.8 3296460 269144 ?      Sl   Oct01   0:04 /opt/safely-you/guardian/venv/bin/uwsgi --socket /var/safely-you/run/guardian/nginx.sock --module server.wsgi --chmod-soc
+root     16313  0.0  0.0      0     0 ?        I    Sep04   0:42 [kworker/6:1]
+root     16561  0.0  0.0      0     0 ?        I<   09:58   0:00 [kworker/u33:13]
+safelyy+ 16814  109  5.8 21173384 1924740 ?    Rl   Oct01 4214:33 /opt/safely-you/guardian/venv/bin/python manage.py services ai run --ai-type=OTG
+safelyy+ 16815  4.7  1.5 3978224 510888 ?      Rl   Oct01 180:39 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:0F:B5 run
+safelyy+ 16816  4.8  1.2 3742848 403152 ?      Sl   Oct01 184:27 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:0F:F1 run
+safelyy+ 16817  5.0  1.3 3763788 451384 ?      Sl   Oct01 195:10 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:15:2D run
+safelyy+ 16818  4.8  1.5 3799984 492324 ?      Sl   Oct01 185:42 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:15:4B run
+safelyy+ 16819  5.0  1.5 3825592 503184 ?      Sl   Oct01 192:31 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:EC run
+safelyy+ 16820  4.7  1.4 3804184 470576 ?      Sl   Oct01 183:12 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:17:FF run
+safelyy+ 16821  4.7  1.6 4013688 525620 ?      Sl   Oct01 183:51 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:10 run
+safelyy+ 16822  4.6  1.2 3736956 399716 ?      Sl   Oct01 180:23 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:14 run
+safelyy+ 16823  4.9  1.5 3969244 521976 ?      Sl   Oct01 188:50 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:2F run
+safelyy+ 16824  5.1  1.5 4032680 515784 ?      Sl   Oct01 198:29 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:35 run
+safelyy+ 16825  4.7  1.4 3993024 476000 ?      Sl   Oct01 183:13 /opt/safely-you/guardian/venv/bin/python manage.py services stream 00:13:E2:27:18:F9 run
+root     17386  0.0  0.0      0     0 ?        I<   09:40   0:00 [kworker/u33:15]
+safelyy+ 17437  329  1.1 3592664 389404 ?      Sl   Oct01 12659:55 /opt/safely-you/guardian/venv/bin/python manage.py services motion run
+root     17523  0.0  0.0      0     0 ?        I    06:16   0:00 [kworker/10:1]
+root     17680  0.0  0.0  56896  4576 ?        Ss   Oct01   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+www-data 17683  0.0  0.0  61644  6772 ?        S    Oct01   0:00 nginx: worker process
+www-data 17685  0.0  0.0  61644  7596 ?        S    Oct01   0:00 nginx: worker process
+www-data 17686  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17688  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17689  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17690  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17691  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17692  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17693  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17694  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17695  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17696  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17697  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17698  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17699  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+www-data 17700  0.0  0.0  61644  6776 ?        S    Oct01   0:00 nginx: worker process
+root     18614  0.0  0.0      0     0 ?        S    Oct01   0:00 [UVM GPU1 BH]
+root     18616  0.0  0.0      0     0 ?        S    Oct01   0:00 [UVM GPU2 BH]
+postfix  19059  0.0  0.0  73816  5516 ?        S    10:57   0:00 pickup -l -t unix -u -c
+safelyy+ 20079  4.1  1.2 3687048 406268 ?      Sl   10:28   1:19 /opt/safely-you/guardian/venv/bin/python manage.py services stream 50:13:95:A2:78:72 run
+root     20085  0.0  0.0      0     0 ?        I<   10:58   0:00 [kworker/u33:2]
+root     20089  0.0  0.0 107992  7364 ?        Ss   10:58   0:00 sshd: doug [priv]
+doug     20091  0.0  0.0  76816  7744 ?        Ss   10:58   0:00 /lib/systemd/systemd --user
+doug     20093  0.0  0.0 112256  2436 ?        S    10:58   0:00 (sd-pam)
+root     20096  0.0  0.0      0     0 ?        I    10:58   0:00 [kworker/9:1]
+doug     20260  0.0  0.0 108108  4448 ?        S    10:58   0:00 sshd: doug@pts/0
+doug     20263  0.0  0.0  22720  5092 pts/0    Ss   10:58   0:00 -bash
+root     20795  0.0  0.0      0     0 ?        I    Oct03   0:00 [kworker/14:1]
+root     22471  0.0  0.0      0     0 ?        I    Sep01   0:48 [kworker/11:1]
+root     22532  0.1  0.0  71340 23108 ?        Ss   May28 215:18 /usr/bin/python /usr/local/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+root     22647  0.0  0.0  58808  3164 ?        S    11:00   0:00 /usr/sbin/CRON -f
+root     22648  0.0  0.0  58808  3172 ?        S    11:00   0:00 /usr/sbin/CRON -f
+root     22656  0.0  0.0  58808  3104 ?        S    11:00   0:00 /usr/sbin/CRON -f
+safelyy+ 22672  0.0  0.0   4636   836 ?        Ss   11:00   0:00 /bin/sh -c sleep 30; /opt/safely-you/guardian/venv/bin/python /opt/safely-you/guardian/manage.py task upload_videos
+safelyy+ 22674  0.0  0.0   4636   832 ?        Ss   11:00   0:00 /bin/sh -c /opt/safely-you/guardian/venv/bin/python /opt/safely-you/guardian/manage.py snapshot
+root     22686  0.0  0.0   4636   812 ?        Ss   11:00   0:00 /bin/sh -c sleep $((RANDOM % 30)); onzra-monitor --nsca-host monitoring.safely-you.com --probe-name "Check VPN Connection
+safelyy+ 22694  0.0  0.0   7476   852 ?        S    11:00   0:00 sleep 30
+safelyy+ 22706 13.0  0.8 3264284 271560 ?      Sl   11:00   0:01 /opt/safely-you/guardian/venv/bin/python /opt/safely-you/guardian/manage.py snapshot
+root     22722  0.2  0.0  31392 11332 ?        S    11:00   0:00 /usr/bin/python3 /usr/bin/onzra-monitor --nsca-host monitoring.safely-you.com --probe-name Check VPN Connection --hostnam
+root     22756  0.0  0.0  18096  2580 ?        S    11:00   0:00 /usr/lib/nagios/plugins/check_ping -H ci.internal.safely-you.com -w 3000.0,80% -c 5000.0,100% -p 5
+root     22762  0.0  0.0  19716  2240 ?        S    11:00   0:00 /bin/ping -n -U -w 30 -c 5 ci.internal.safely-you.com
+root     22929  0.0  0.0      0     0 ?        I    Oct03   0:00 [kworker/2:2]
+doug     23757  0.0  0.0  37376  3352 pts/0    R+   11:00   0:00 ps aux
+root     25725  0.0  0.0      0     0 ?        I    10:30   0:00 [kworker/u32:0]
+root     26131  0.0  0.0      0     0 ?        I    Oct03   0:00 [kworker/8:1]
+root     26325  0.0  0.0      0     0 ?        I<   07:49   0:01 [kworker/u33:14]
+root     26618  0.0  0.0      0     0 ?        I    06:36   0:00 [kworker/15:2]
+root     26992  0.0  0.0      0     0 ?        I<   10:45   0:00 [kworker/u33:3]
+root     27230  0.0  0.0      0     0 ?        I    Sep05   0:40 [kworker/10:0]
+root     27240  0.0  0.0      0     0 ?        I<   08:42   0:01 [kworker/u33:4]
+root     27493  0.0  0.0      0     0 ?        I    Jun23   2:14 [kworker/9:2]
+root     27807  0.0  0.0      0     0 ?        I    Oct01   0:00 [kworker/13:1]
+root     27852  0.0  0.0      0     0 ?        I<   06:54   0:01 [kworker/u33:12]
+root     27898  0.0  0.0      0     0 ?        I<   10:19   0:00 [kworker/u33:8]
+root     28660  0.0  0.0      0     0 ?        I    Jun15  20:41 [kworker/2:0]
+postfix  29264  0.0  0.0  73828  5360 ?        S    10:46   0:00 trivial-rewrite -n rewrite -t unix -u -c
+root     29522  0.0  0.0      0     0 ?        I    May28   2:26 [kworker/8:4]
+root     29646  0.0  0.0      0     0 ?        I    May28   3:05 [kworker/14:5]
+root     30067  0.0  0.0      0     0 ?        I    Jul10   2:05 [kworker/13:2]
+root     30259  0.0  0.0      0     0 ?        I    02:41   0:00 [kworker/7:0]
+root     30694  0.0  0.0      0     0 ?        I<   01:46   0:03 [kworker/u33:11]
+root     31552  0.0  0.0      0     0 ?        I    06:24   0:00 [kworker/11:2]
+root     32181  0.0  0.0      0     0 ?        I    May28   2:41 [kworker/4:0]
+root     32415  0.0  0.0      0     0 ?        I    10:21   0:00 [kworker/u32:3]
+root     32420  0.0  0.0      0     0 ?        I    Oct03   0:00 [kworker/5:0]
+root     32534  0.0  0.0      0     0 ?        I    06:24   0:00 [kworker/4:1]
+root     32645  0.0  0.0      0     0 ?        I    May28   3:06 [kworker/7:5]

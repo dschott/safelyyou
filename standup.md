@@ -1,5 +1,12 @@
 # Standup
 
+- Guardian - Running on ARM / Redis / Mysql / New Mac / Local Ubuntu to 18.04
+- Magic tarball - Build script created
+- Sky - Setup
+- Also has a magic tarball
+- MockCamera
+-
+
 ---
 `2021-09-20`
 `Y`
