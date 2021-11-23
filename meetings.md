@@ -1,5 +1,19 @@
 # Meeting Notes
 
+
+## 2021-10-27 - Shirley intro to Safely You
+
+- Closest competitior?
+- Do facilities see this as a reduction of
+- Response time improvements? Evening rates worse.
+- Missed fall rate? Accuracy - 99.3%
+- Assisted Living - Private
+- Skilled Nursing Facility - Can't cook for themselves etc
+  - short or long-term
+  - 24/7 clinical support
+  - SNF
+- Locked units
+- 3 min tag - 2 min staff
 ## 2021-10-14 - Guardian Multiple Models
 
 Jason, Raghav

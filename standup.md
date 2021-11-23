@@ -1,11 +1,42 @@
 # Standup
 
-- Guardian - Running on ARM / Redis / Mysql / New Mac / Local Ubuntu to 18.04
-- Magic tarball - Build script created
-- Sky - Setup
-- Also has a magic tarball
-- MockCamera
--
+# 2021-11-19
+
+- NMap in mac docker - Added DEVICE_DISCOVERY_IP_RANGES
+- Connected to stage - local and mock cameras
+- Loaded latest AI models
+- Get AI to work in container
+  - NVidia driver container (time = read and understand docs)
+    - Disable Nouveau driver
+    - Enable IPMI driver
+    - Enable the i2c_core kernel module
+    - Nvidia container toolkit
+    - OS config
+    - Docker config
+  - NVidia pid handling for `nvidia-smi`
+  - Mac OS is not supported - Settings profile for Mac OS, Guardian, (eventually cloud)
+- Need to complete to test LTS in docker
+
+## 2021-11-08
+
+- Friday - Jason new office
+- Camera Hacking - LTS models / Setup Amcrest Camera / IR mode
+- Running out of connections (breaking)
+- Write -> video  / Read <- queue
+
+Eskaton Placerville
+
+## 2021-10-29
+
+- Containerized dev env on Guardian
+  - Getting cameras connected
+  - Added safelyyou user
+  - Working out security (non-root, file permissions)
+  - VSCode dev laptop remotely connected to guardian
+- Loaded multiple OTG models using gpu_id (not validated using a camera yet)
+- Moved guardian to separate network interface on firewall (VPN)
+- Safety check review / test today
+- Revisit AI/Video processing design / document - video toolbox interface/function / sky interface
 
 ---
 `2021-09-20`

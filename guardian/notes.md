@@ -200,6 +200,139 @@ so all our monitoring was set up by onzra.  I’m waiting on atlas and k8s to ov
 Slack is not a great tool for escalations
 Google drive is not a great tool for managing support docs
 
+## SSM Setup
+
+```
+Jason  11:08 AM
+@Ken can you send me the command to install SSM on a gurdian?
+
+Ken  11:12 AM
+# on local:  add this to ~/.ssh/config
+Host i-* mi-*
+     ForwardAgent yes
+     ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+     StrictHostKeyChecking no
+
+
+# on guardian
+curl https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_amd64/amazon-ssm-agent.deb -o /tmp/amazon-ssm-agent.deb
+sudo dpkg -i /tmp/amazon-ssm-agent.deb
+sudo service amazon-ssm-agent stop
+sudo -E amazon-ssm-agent -register -code OOQI9LdK6lOVkwaW2Ngv -id 8a41615d-5509-4706-9647-931cd3348dd2  -region us-west-2
+  ## note the "mi-..." number that comes out of this
+sudo service amazon-ssm-agent start
+sudo reboot now
+
+# on local:  ssh into the box after reboot
+ssh whatever@mi-...  (same mi number you grabbed above)
+11:12
+this line…
+sudo -E amazon-ssm-agent -register -code OOQI9LdK6lOVkwaW2Ngv -id 8a41615d-5509-4706-9647-931cd3348dd2  -region us-west-2
+has to be re-done every 30 days.  if that doesn’t work let me know and I’ll make you a new pair
+
+Jason  11:15 AM
+mi-0e185fcff2b07656a
+11:15
+office guardian with AMD proc
+:+1:
+1
+
+11:15
+rebooting now
+11:17
+An error occurred (BadRequest) when calling the StartSession operation: Enable advanced-instances tier to use Session Manager with your on-premises instances
+kex_exchange_identification: Connection closed by remote host
+Connection closed by UNKNOWN port 65535
+
+Ken  11:18 AM
+export AWS_ACCESS_KEY_ID=your value
+export AWS_SECRET_ACCESS_KEY=your value
+11:18
+do that before you ssh
+
+Jason  11:18 AM
+ah..
+11:21
+lol.. there were literally 1000 entries of mysql being added to my path in my ~/.zshrc file
+11:22
+export PATH=“/usr/local/opt/mysql-client/bin:$PATH”
+11:22
+something keeps adding that
+11:22
+wtf
+11:22
+over and over again
+11:22
+hahaha
+11:22
+echo ‘export PATH=“/usr/local/opt/mysql-client/bin:$PATH”’ >> ~/.zshrc
+11:22
+that is also in the file
+
+Ken  11:23 AM
+inception
+
+Jason  11:25 AM
+ok.. have it in my env now but I get same error.. guessing my user doesn’t have access
+
+Ken  11:26 AM
+thats weird.  you’re admin.  let me make sure I can get in
+11:27
+I can hit it.  one sec
+11:28
+I added you to the ssm user group I made.  try it now
+
+Jason  1:00 PM
+so mi-0e185fcff2b07656a doesn’t show up in the list of instances in the fleet manager ui
+
+Ken  1:00 PM
+export AWS_DEFAULT_REGION=us-west-2
+1:00
+try that
+
+Jason  1:01 PM
+ok.. now i get this.. SessionManagerPlugin is not found. Please refer to SessionManager
+
+Ken  1:02 PM
+do this…
+https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html#install-plugin-macos
+docs.aws.amazon.comdocs.aws.amazon.com
+(Optional) Install the Session Manager plugin for the AWS CLI - AWS Systems Manager
+Install the Session Manager plugin on your system to use the AWS CLI to start and end sessions that connect to your managed instances.
+
+Jason  1:02 PM
+yep
+1:02
+i’m in now
+
+Ken  1:02 PM
+nice
+1:02
+probably worth a readme about all that
+
+Jason  1:03 PM
+so ken.. can you just point some ansible at that and get it set up as a guardian now?
+New
+
+Ken  1:03 PM
+pretty much.  I tell it that the ansible_host=mi-232342344 and with that ssh config it just works.  little slow though
+
+Jason  1:04 PM
+send me the commands to run and I can do it
+safelyyou
+fire
+raised_hands::skin-tone-3
+
+
+1:04
+going to point it at https://tenant4.discover.dev1.safely-you.com/login
+1:04
+which is in k8s
+
+Ken  1:04 PM
+k
+```
+
 
 ## Week in Support
 
