@@ -1,6 +1,52 @@
 # Standup
 
-# 2021-11-19
+## 2021-12-10
+
+- Reviewed: Yocto
+- Reviewed: container access to devices (IPU, VPU, NPU)
+- Mock camera: Chart
+- Fix: Guardian startup: ai model update -> should download
+
+- Testing k3s deployments
+- Deploy to kubernetes to dev
+- Add Automation for deployment
+
+## 2021-12-06
+
+- Review/Conversation: Guardian dev workflow; Recommend Gitflow
+- Cleaned up stale branches / PRs
+- Finished: Image build/publish to ECR, Github Action (buildx ssh handling)
+- Finished: Helm Chart, solved pulling images from ECR to K3S
+- In Progress: Gitflow Github Actions
+  - Getting 400 on Guardian registration in Staging Sky; Spins in UI on Stage Sky
+- Review: LTS patch from Alex
+
+- Code: LTS impl
+  - Guardian implementation POC/untested
+  - Deviation from original plan (because uses single model, integrated into current AI process for OTG)
+  - Won't have enough time to complete this sprint
+  - Prioritize completing CI/CD work
+- Finish: Gitflow Github Actions -> deployment to stage (even if not healthy)
+- Document: Dev workflow
+- Resolve: Registration in Stage/Staging Sky
+- Code: mac address spoofing
+
+## 2021-11-24
+
+Y:
+- Documentation
+- Planning
+T:
+- Investigate IR issue
+  - Track
+  - Snapshot / video orientation
+  - More agressive reboot schedule?
+  -
+- Finalize/cleanup containerization branch
+- Start prototyping RTSP stream handling, motion detection replacement
+  - The code is overly complex
+
+## 2021-11-19
 
 - NMap in mac docker - Added DEVICE_DISCOVERY_IP_RANGES
 - Connected to stage - local and mock cameras

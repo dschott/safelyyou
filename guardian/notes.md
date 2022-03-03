@@ -160,6 +160,17 @@ NSVideoStream --|> sy_toolbox.VideoStream
 
 SafetyCheckInterface - Safety Check interface. This sends alarms from a room periodically for review.
 
+## Rando meeting
+
+Refactor for scalability and safety (uptime)
+Refactor for pull system (pull ai experiments down)
+Refactor for running more than 1 ai routine.
+A/B Testing for new AI models
+The ability to run a second model in silent mode and possibly collect alarms
+Send to Magellin (so we can experiment and test) but dont escalate.
+ability to execute binocular AI.
+2 cameras in each room for redundancy, could we take advantage of this for AI
+
 ## Questions
 
 Doug Today at 12:33 PM
@@ -218,7 +229,7 @@ Host i-* mi-*
 curl https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_amd64/amazon-ssm-agent.deb -o /tmp/amazon-ssm-agent.deb
 sudo dpkg -i /tmp/amazon-ssm-agent.deb
 sudo service amazon-ssm-agent stop
-sudo -E amazon-ssm-agent -register -code OOQI9LdK6lOVkwaW2Ngv -id 8a41615d-5509-4706-9647-931cd3348dd2  -region us-west-2
+sudo -E amazon-ssm-agent -register -code REDACTED -id REDACTED  -region us-west-2
   ## note the "mi-..." number that comes out of this
 sudo service amazon-ssm-agent start
 sudo reboot now
@@ -227,7 +238,7 @@ sudo reboot now
 ssh whatever@mi-...  (same mi number you grabbed above)
 11:12
 this line…
-sudo -E amazon-ssm-agent -register -code OOQI9LdK6lOVkwaW2Ngv -id 8a41615d-5509-4706-9647-931cd3348dd2  -region us-west-2
+sudo -E amazon-ssm-agent -register -code REDACTED -id REDACTED  -region us-west-2
 has to be re-done every 30 days.  if that doesn’t work let me know and I’ll make you a new pair
 
 Jason  11:15 AM
@@ -563,3 +574,247 @@ docker rm -v "${id}" > /dev/null
 rm -f tb-ai-lib.tar.gz
 tar -czf tb-ai-lib.tar.gz .
 ```
+
+
+
+
+
+# update_settings() {
+#     if [ -f "${GUARDIAN_SETTINGS}" ]
+#     then
+#         2>&1 echo "Updating settings from: ${GUARDIAN_SETTINGS}"
+#         jq -s '.[0] * .[1]' "${settings_file}" "${GUARDIAN_SETTINGS}" > "${guardian_root}/conf/settings.tmp.json"
+#         cat "${guardian_root}/conf/settings.tmp.json" > "${settings_file}"
+#         rm "${guardian_root}/conf/settings.tmp.json"
+#     fi
+# }
+
+
+# if [ -n "${SU_UID}" ] && [ -n "${SU_GID}" ]
+# then
+#     old_uid=$(id -u safelyyou)
+#     old_gid=$(id -g safelyyou)
+
+#     if [ "${old_uid}" != "${SU_UID}" ] || [ "${old_gid}" != "${SU_GID}" ]
+#     then
+#         usermod --uid "${SU_UID}" --non-unique safelyyou
+#         groupmod --gid "${SU_GID}" --non-unique safelyyou
+
+#         find / -path /proc -prune -o -group "${old_gid}" , -user "${old_uid}" -exec chown -h safelyyou:safelyyou {} \;
+#     fi
+# fi
+
+
+
+# def update_mac_address(mac, interface):
+#     if os.environ['ALLOW_MAC_OVERRIDE'] != 'true':
+#         # The mac address should only be changed when running in a container
+#         # ALLOW_MAC_OVERRIDE is set in Dockerfile
+#         log.warning("ALLOW_MAC_OVERRIDE is not set but mac was specified; skipping mac address override")
+#         return
+
+#     cmd = [ 'macchanger', '--mac', mac, interface ]
+#     try:
+#         result = subprocess.check_output(cmd, stderr=subprocess.PIPE)
+#         subprocess.run
+#         log.info("mac address updated\n" + result.decode())
+#     except subprocess.CalledProcessError as e:
+#         if e.stdout:
+#             log.info("mac address not updated\n" + e.stdout.decode())
+#         if e.stderr and len(e.stderr) > 0:
+#             log.error("mac update failed\n" + e.stderr.decode())
+#             raise
+
+
+
+REPO=mock-camera
+REGION=us-west-2
+TAG=0.0.1-1-g27a8cd5
+NEW_TAG=latest
+
+MANIFEST=$(aws ecr batch-get-image --repository-name "${REPO}" --image-ids imageTag="${TAG}" --query 'images[].imageManifest' --output text)
+
+aws ecr put-image --region "${REGION}" --repository-name "${REPO}" --image-tag "${NEW_TAG}" --image-manifest "${MANIFEST}"
+
+
+
+docker pull 315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest
+
+docker run --rm -it \
+  -v $(pwd):/data \
+  --network host \
+  -p 80 \
+  -p 554 \
+  --name mock-camera-1 \
+  315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+  run --stream /data/stream.ts --snapshot /data/snapshot.png
+
+
+
+docker run --rm -it \
+  --network host \
+  -p 80:8080 \
+  -p 554:10554 \
+  --name mock-camera-1 \
+  --entrypoint "" \
+  -u 0:0 \
+  315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+  bash
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mock-camera-1
+
+--entrypoint "mock_camera/main.py" \
+
+docker run --rm -it \
+  --network host \
+  --name mock-camera-1 \
+  -w /src \
+  -v $(pwd):/src \
+  315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:dev \
+  bash -c 'make clean install && mock-camera run'
+
+docker run --rm -it \
+    --name mock-camera-1 \
+    --network host \
+    -p 80:80 \
+    -p 554:554 \
+    --user 0:0 \
+    -v $(pwd):/data \
+    -w /data \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:0.0.1-2-gc5f0c86-dirty \
+    run --snapshot snapshot.png --stream stream.ts
+
+docker run --rm -it \
+    --name mock-camera-1 \
+    --network host \
+    -p 80 \
+    -p 554 \
+    -u 0:0 \
+    -v $(pwd):/src \
+    -w /src \
+    --entrypoint mock_camera/main.py \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:dev \
+    run
+
+
+
+ffmpeg -hide_banner \
+    -rtsp_transport tcp \
+    -i 'rtsp://192.168.65.3/stream' \
+    -movflags +frag_keyframe+separate_moof+omit_tfhd_offset+empty_moov \
+    -c copy -y stream.mp4
+
+
+You will need run the mock camera from Docker on the Jax Guardian. I've set the Guardian up to do this.
+To run a mock-camera, do the following:
+
+```
+IP_ADDRESS=192.168.1.199
+INTERFACE=eno2
+
+sudo ifconfig ${INTERFACE}:0 ${IP_ADDRESS} netmask 255.255.255.0 up
+
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 315020830454.dkr.ecr.us-west-2.amazonaws.com
+
+docker pull 315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest
+
+docker run --rm -it \
+    --ip ${IP_ADDRESS} \
+    --publish ${IP_ADDRESS}:80:80 \
+    --publish ${IP_ADDRESS}:554:554 \
+    --user 0:0 \
+    --volume $(pwd):/data \
+    --workdir /data \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+    run --snapshot snapshot.png --stream stream.ts
+
+sudo ifconfig ${INTERFACE}:0 ${IP_ADDRESS} netmask 255.255.255.0 down
+```
+
+
+nmap -n -oX - 192.168.1.1/24 -sP
+
+
+docker run --rm -it \
+    --ip 192.168.1.50 \
+    --publish 192.168.1.50:80:80 \
+    --publish 192.168.1.50:554:554 \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+    run
+
+
+
+docker run --rm -it \
+    --publish 192.168.1.199:80:80 \
+    --publish 192.168.1.199:554:554 \
+    --user 0:0 \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+    run
+
+
+
+
+docker run --rm -it \
+    -p 80:80 \
+    -p 554:554 \
+    -u 0:0 \
+    -v $(pwd):/src \
+    -w /src \
+    --entrypoint mock_camera/main.py \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:dev \
+    run
+
+
+docker run --rm -it \
+    --publish 80:80 \
+    --publish 554:554 \
+    --user 0:0 \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+    run
+
+
+
+The Mock camera is intended to run within a Docker network, however, I was able
+to configure/hack the Jax machine so that the camera can be used.
+
+Io get this working, I did the following:
+
+- Installed Docker: https://docs.docker.com/engine/install/ubuntu/
+- Configured myself as a docker user
+
+- Added "Mock" to `conf/settings.json`
+
+sudo ifconfig eno2:0 192.168.1.222 netmask 255.255.255.0 up
+
+docker run --rm -it \
+    --publish 192.168.1.222:80:80 \
+    --publish 192.168.1.222:554:554 \
+    --user 0:0 \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+    run
+
+sudo ifconfig eno2:0 down
+
+cp /etc/nginx/sites-enabled/guardian.conf /etc/nginx/guardian.conf.bak
+sed "s/\(listen *\)80 \(.*\)/\1192.168.1.41:80 \2/g" /etc/nginx/sites-enabled/guardian.conf > /etc/nginx/sites-enabled/guardian.conf.tmp
+mv /etc/nginx/sites-enabled/guardian.conf.tmp /etc/nginx/sites-enabled/guardian.conf
+sudo service nginx restart
+mv /etc/nginx/guardian.conf.bak /etc/nginx/sites-enabled/guardian.conf
+
+
+docker run --rm -it \
+    --publish 192.168.1.222:80:80 \
+    --publish 192.168.1.222:554:554 \
+    --user 0:0 \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+    run
+
+$ docker stop mock-camera-1
+$ docker run --rm -it \
+    --name mock-camera-1 \
+    --publish 192.168.1.222:80:80 \
+    --publish 192.168.1.222:554:554 \
+    --volume $(pwd):/data \
+    --workdir /data \
+    315020830454.dkr.ecr.us-west-2.amazonaws.com/mock-camera:latest \
+    run --stream stream.ts --snapshot snapshot.png
