@@ -1,5 +1,8 @@
 # TODO
 
+Enable Auto OTG Escalation
+/tmp/enable_escalation_test
+
 ```
 Russ
 System set up in k8s.
